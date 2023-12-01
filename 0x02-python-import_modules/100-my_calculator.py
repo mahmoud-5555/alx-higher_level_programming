@@ -8,7 +8,7 @@ if __name__ == "__main__":
         opr = sys.argv[2]
         if opr == '+':
             print("{} {} {} = {}".format(a, opr, b, calculator_1.add(a, b)))
-        elif opration == '-':
+        elif opr == '-':
             print("{} {} {} = {}".format(a, opr, b, calculator_1.sub(a, b)))
         elif opr == '*':
             print("{} {} {} = {}".format(a, opr, b, calculator_1.mul(a, b)))
