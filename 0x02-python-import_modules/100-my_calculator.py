@@ -5,7 +5,6 @@ if __name__ == "__main__":
 
 	#try:
 	a = int(sys.argv[1])
-	print(sys.argv[3])
 	b = int(sys.argv[3])
 	opration = sys.argv[2]
 	if opration == '+':
