@@ -2,6 +2,7 @@
 if __name__ == "__main__":
     import sys
     import calculator_1
+    mahmoud = {'+' : calculator_1.add}
     try:
         a = int(sys.argv[1])
         b = int(sys.argv[3])
@@ -20,3 +21,4 @@ if __name__ == "__main__":
     except IndexError:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
+    
