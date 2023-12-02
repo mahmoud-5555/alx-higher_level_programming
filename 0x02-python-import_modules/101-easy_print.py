@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-exec("try: 1/0\nexcept: open(1, 'w').write('#pythoniscool\\n')")
+exec("try: 1/0\nexcept: __import__('os').write(1, b'#pythoniscool\\n')")
