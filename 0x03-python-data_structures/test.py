@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-def print_list_integer(my_list=[]):
-	my_list[2] = -1
+def no_c(my_string):
+    return ''.join(map(lambda x: '' if x.lower() == 'c' else x, my_string))
 
-a = [1, 5, 11, 12]
+print(no_c("Best School"))
+print(no_c("Chicago"))
+print(no_c("C is fun!"))
 
-print_list_integer(a)
-print(a)
