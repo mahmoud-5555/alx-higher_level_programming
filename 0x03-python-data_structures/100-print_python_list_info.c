@@ -1,5 +1,3 @@
-#include <time.h>
-#include <stdio.h>
 #include <Python.h>
 
 /**
@@ -21,7 +19,7 @@ void print_python_list_info(PyObject *p)
 
 		if (item != NULL)
 		{
-			printf("Element %d: %s\n", it, item->ob_type->tp_name);
+			printf("Element %d: %s\n", it, Py_TYPE(item)->tp_name);
 		}
 		else
 		{
