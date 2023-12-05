@@ -4,5 +4,5 @@ def delete_at(my_list=[], idx=0):
         return my_list
     if my_list is None:
         return []
-    del my_list[edx]
+    del my_list[idx]
     return my_list
