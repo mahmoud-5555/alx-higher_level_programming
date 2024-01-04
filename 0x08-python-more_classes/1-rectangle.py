@@ -4,6 +4,8 @@
 
 class Rectangle:
 
+    """A class to represent a rectangle."""
+    
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
             raise TypeError("Width must be an integer")
@@ -41,4 +43,8 @@ class Rectangle:
             raise ValueError("Height must be >= 0")
         self.__height = value
 
-    
+    def area(self):
+        return self.__width * self.__height
+
+    def perimeter(self):
+        return 2 * (self.__width + self.__height)
