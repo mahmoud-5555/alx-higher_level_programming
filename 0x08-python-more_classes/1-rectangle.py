@@ -88,6 +88,6 @@ class Rectangle:
             return rect_2
 
     @staticmethod
-    def quare(cls, size=0):
+    def square(cls, size=0):
         new_square = Rectangle(size, size)
         return new_square
