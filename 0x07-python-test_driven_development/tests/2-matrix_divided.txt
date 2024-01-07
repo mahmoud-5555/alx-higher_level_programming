@@ -1,0 +1,32 @@
+The ``2-matrix_divided.py`` module
+======================
+
+Using ``Error test type of the prameters``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``matrix_divided`` from the ``2-matrix_divided.py`` module:
+import module:
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+The test:
+>>> matrix_divided([[2, 4, 10], [12, 18, 22], [14, 20, 15]], 2)
+[[1.0, 2.0, 5.0], [6.0, 9.0, 11.0], [7.0, 10.0, 7.5]]
+>>> matrix_divided([[2.0, 4.0, 10.0], [12.0, 18.0, 22.0], [14.0, 20.0, 15.0]], 2)
+[[1.0, 2.0, 5.0], [6.0, 9.0, 11.0], [7.0, 10.0, 7.5]]
+>>> matrix_divided([[2, 4, 10], [12, 18, 22], [14, 20, 15]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> matrix_divided([[2, 4, 10], [12, '18', 22], [14, 20, 15]], 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[2, 4, 10], [12, 18, 22], [14, 15]], 2)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+>>> matrix_divided([[2, 4, 10], [12, 18, 22], [14, 20, 15]], '2')
+Traceback (most recent call last):
+...
+TypeError: div must be a number
