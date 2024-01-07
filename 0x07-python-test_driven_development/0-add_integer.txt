@@ -1,0 +1,29 @@
+The ``0_add_intgers`` module
+======================
+
+Using ``Error test type of the prameters``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``add_integer`` from the ``0-add_integer.py`` module:
+import module:
+add_integer = __import__('0-add_integer.py').add_integer
+
+The test:
+
+>>> add_integer(1,2)
+3
+>>> add_integer(1.0, 2.0)
+3
+>>> add_integer("1", "2")
+a must be an integer
+>>> add_integer(1, "2")
+b must be an integer
+>>> add_integer(-1, -13)
+-14
+>>> add_integer(1.9, 2,9)
+3
+>>> add_integer(True, False)
+a must be an integer
+>>> add_integer(None)
+a must be an integer
