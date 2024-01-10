@@ -20,4 +20,6 @@ class Rectangle(BaseGeometry):
         print("[Rectangle] {}/{}".format(self.__width, self.__height))
 
     def area(self):
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return self.__width * self.__height
