@@ -13,7 +13,7 @@ class BaseGeometry:
         """integer_validator"""
         if type(name) is not str:
             raise TypeError('parameter name must be a string')
-        if name is '':
+        if name == '':
             raise ValueError('name cannot be empty')
         if type(value) is not int:
             raise TypeError(name + " must be an integer")
