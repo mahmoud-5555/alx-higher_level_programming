@@ -2,10 +2,10 @@
 """ Myint """
 
 
-class myint(int):
+class MyInt(int):
     """this myint calss that make the opratetor negtive or invers"""
-    def __eq__(self, a, b):
-        return not int.__eq__(a, b)
+    def __eq__(self, b):
+        return not int.__eq__(self, b)
 
-    def __ne__(self, a, b):
-        return int.__eq__(a, b)
+    def __ne__(self, b):
+        return int.__eq__(self, b)
