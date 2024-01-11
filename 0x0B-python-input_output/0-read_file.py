@@ -9,5 +9,4 @@ def read_file(filename=""):
     contest = ''
     with open(filename, 'r+', encoding='UTF8') as myfile:
         contest = myfile.read()
-        print(contest)
-        return contest
+        print(contest, end='')
