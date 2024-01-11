@@ -9,4 +9,4 @@ def save_to_json_file(my_obj, filename):
         using a JSON representation
     '''
     with open(filename, 'w', encoding='UTF8') as file:
-        file.write(json.dump(my_obj))
+        json.dump(my_obj, file, ensure_ascii=False, indent=4)
