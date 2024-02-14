@@ -1,2 +1,2 @@
---this code should create new data bases
-CREATE DATABASE IF NOT EXISTS hbtn_0c_0n;
+-- creates the database hbtn_0c_0
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;

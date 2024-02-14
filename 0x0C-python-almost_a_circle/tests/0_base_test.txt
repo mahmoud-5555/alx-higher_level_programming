@@ -1,0 +1,36 @@
+The ``1-mylist`` module
+======================
+
+Using ``testing to 0_base``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``base class`` from the ``0_base.py `` module:
+import module:
+>>> Base = __import__('base').Base
+>>> b1 = Base()
+>>> print(b1.id)
+1
+>>> b2 = Base()
+>>> print(b2.id)
+2
+>>> b3 = Base()
+>>> print(b3.id)
+3
+>>> b4 = Base(12)
+>>> print(b4.id)
+12
+>>> b5 = Base()
+>>> print(b5.id)
+4
+
+Testing id condntion <<id can be any thing>>
+
+>>> b6 = Base("string")
+>>> print(b6.id)
+string
+
+testing the dublecte of the id
+>>> b7 = Base(4)
+>>> b5.id == b7.id
+True

@@ -1,0 +1,116 @@
+The ``1-mylist`` module
+======================
+
+Using ``testing to rectangle``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``rectangle class`` from the ``rectangle.py `` module:
+import module:
+>>> Base = __import__('base').Base
+>>> Rectangle = __import__("rectangle").Rectangle
+
+test_the_constructor:
+>>> r1 = Rectangle(10, 2)
+>>> print(r1.id)
+1
+>>> r2 = Rectangle(2, 10)
+>>> print(r2.id)
+2
+>>> r3 = Rectangle(10, 2, 0, 0, 12)
+>>> print(r3.id)
+12
+>>> Rectangle(10, "2")
+Traceback (most recent call last):
+...
+TypeError: height must be an integer
+>>> r = Rectangle(10, 2)
+>>> r.width = -10
+Traceback (most recent call last):
+...
+ValueError: width must be >= 0
+>>> r = Rectangle(10, 2)
+>>> r.x = {}
+Traceback (most most recent call last):
+...
+TypeError: x must be an integer
+
+>>> Rectangle(10, 2, 3, -1)
+Traceback (most most recent call last):
+...
+ValueError: y must be >= 0
+
+test the area:
+>>> r1 = Rectangle(3, 2)
+>>> print(r1.area())
+6
+>>> r2 = Rectangle(2, 10)
+>>> print(r2.area())
+20
+>>> r3 = Rectangle(8, 7, 0, 0, 12)
+>>> print(r3.area())
+56
+
+test the display function :
+
+>>> r1 = Rectangle(4, 6)
+>>> r1.display()
+####
+####
+####
+####
+####
+####
+>>> r1 = Rectangle(2, 2)
+>>> r1.display()
+##
+##
+>>> r1 = Rectangle(2, 3, 2, 2)
+>>> r1.display()
+
+
+  ##
+  ##
+  ##
+>>> r2 = Rectangle(3, 2, 1, 0)
+>>> r2.display()
+ ###
+ ###
+
+test the string represintion:
+
+>>> r1 = Rectangle(4, 6, 2, 1, 12)
+>>> print(r1)
+[Rectangle] (12) 2/1 - 4/6
+>>> r2 = Rectangle(5, 5, 1)
+>>> print(r2)
+[Rectangle] (1) 1/0 - 5/5
+
+
+the function update :
+>>> r1 = Rectangle(10, 10, 10, 10)
+>>> print(r1)
+[Rectangle] (1) 10/10 - 10/10
+>>> r1.update(89)
+>>> print(r1)
+[Rectangle] (89) 10/10 - 10/10
+>>> r1.update(89, 2)
+>>> print(r1)
+[Rectangle] (89) 10/10 - 2/10
+>>> r1.update(89, 2, 3)
+>>> print(r1)
+[Rectangle] (89) 10/10 - 2/3
+>>> r1.update(89, 2, 3, 4)
+>>> print(r1)
+[Rectangle] (89) 4/10 - 2/3
+>>> r1.update(89, 2, 3, 4, 5)
+>>> print(r1)
+[Rectangle] (89) 4/5 - 2/3
+
+
+
+
+    
+    
+
+

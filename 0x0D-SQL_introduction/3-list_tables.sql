@@ -1,2 +1,2 @@
---this script should list table
+-- lists all the tables of a database
 SHOW TABLES;
