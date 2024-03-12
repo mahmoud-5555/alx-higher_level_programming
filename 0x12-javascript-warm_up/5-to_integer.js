@@ -5,10 +5,10 @@ function isDigite (value) {
 }
 
 const { argv } = require('node:process');
-const text = 'My number: ' + argv[2];
 
 if (isDigite(argv[2])) {
-  console.log(text);
+  const number = parseInt(argv[2]);
+  console.log('My number: ' + number);
 } else {
   console.log('Not a number');
 }
