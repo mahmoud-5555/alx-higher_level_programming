@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 function isDigite (value) {
-  return /^\d+$/.test(value);
+  return /^-?\d+$/.test(value);
 }
 
 const { argv } = require('node:process');
