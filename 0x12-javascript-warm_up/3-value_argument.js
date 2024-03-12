@@ -4,4 +4,7 @@ const { argv } = require('node:process');
 
 if (argv[2] === undefined) {
   console.log('No argument');
-} else { console.log(argv[2]); }
+} else {
+  let i = 2;
+  while (argv[i] !== undefined) { console.log(argv[i]); i++; }
+}
