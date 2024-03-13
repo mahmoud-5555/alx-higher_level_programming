@@ -8,7 +8,7 @@ class Square extends Test {
       c = 'X';
     }
     for (let i = 0; i < this.width; i++) {
-      mywidth += 'c';
+      mywidth += c;
     }
     for (let i = 0; i < this.height; i++) {
       console.log(mywidth);
