@@ -9,7 +9,7 @@ function isDigite (value) {
 }
 
 if (argv.length < 4) {
-  console.log('NAN');
+  console.log('NaN');
 } else {
   if (isDigite(argv[2]) && isDigite(argv[3])) {
     const result = add(Number(argv[2]), Number(argv[3]));
