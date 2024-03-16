@@ -28,7 +28,6 @@ if __name__ == "__main__":
     Upass = argumant[2]
     dp = argumant[3]
 
-
     mysatabase =\
         connect_to_mysql(host=h, user=u, password=Upass, databases=dp)
     dp_pointer = mysatabase.cursor()
