@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     dp_pointer = mysatabase.cursor()
     dp_pointer.execute("SELECT id,name FROM states\
-                       WHERE name like 'N%' ORDER BY id;")
+                       WHERE name LIKE BINARY 'N%' ORDER BY id;")
     result = dp_pointer.fetchall()
     for state in result:
         print(state)
