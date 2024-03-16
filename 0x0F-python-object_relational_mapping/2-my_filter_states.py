@@ -33,7 +33,7 @@ if __name__ == "__main__":
         connect_to_mysql(host=h, user=u, password=Upass, databases=dp)
     dp_pointer = mysatabase.cursor()
     dp_pointer.execute("SELECT id,name FROM states\
-                       WHERE name = '{}' ORDER BY id;".format(search))
+                       WHERE BINARY name = '{}' ORDER BY id;".format(search))
     result = dp_pointer.fetchall()
     for state in result:
         print(state)
