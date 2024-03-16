@@ -29,6 +29,10 @@ if __name__ == "__main__":
     dp = argumant[3]
     search = argumant[4]
 
+    for i in range(len(search)):
+        if search[i] == "'":
+            search = search[:i]
+
     mysatabase =\
         connect_to_mysql(host=h, user=u, password=Upass, databases=dp)
     dp_pointer = mysatabase.cursor()
