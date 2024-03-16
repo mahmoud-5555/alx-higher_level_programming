@@ -33,14 +33,11 @@ if __name__ == "__main__":
     dp = argumant[3]
 
     mysatabase =\
-        connect_to_mysql(host=h, user=u, password=Upass,\
-                          databases=dp, port=3306)
+        connect_to_mysql(host=h, user=u, password=Upass, databases=dp)
 
-    if mysatabase is None:
-        exit(1)
     dp_pointer = mysatabase.cursor()
     dp_pointer.execute("SELECT id,name FROM states\
-                       WHERE name like 'N%' OR name = 'N' ORDER BY id;")
+                       WHERE name like 'N%' ORDER BY id;")
     result = dp_pointer.fetchall()
     for state in result:
         print(state)

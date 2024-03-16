@@ -30,11 +30,7 @@ if __name__ == "__main__":
     search = argumant[4]
 
     mysatabase =\
-        connect_to_mysql(host=h, user=u, password=Upass,\
-                          databases=dp, port=3306)
-
-    if mysatabase is None:
-        exit(1)
+        connect_to_mysql(host=h, user=u, password=Upass, databases=dp)
     dp_pointer = mysatabase.cursor()
     dp_pointer.execute("SELECT id,name FROM states\
                        WHERE name = '{}' ORDER BY id;".format(search))
