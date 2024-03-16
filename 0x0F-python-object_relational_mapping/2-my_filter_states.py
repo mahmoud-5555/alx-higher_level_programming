@@ -17,11 +17,7 @@ def connect_to_mysql(host, user, password, databases):
     password: the password that related to the username
     database: the database that you wanna to connect with
     """
-    try:
-        mydatabases = MySQLdb.Connect(host, user, password, databases)
-    except NameError as error:
-        return None
-
+    mydatabases = MySQLdb.Connect(host, user, password, databases)
     return mydatabases
 
 
@@ -34,7 +30,8 @@ if __name__ == "__main__":
     search = argumant[4]
 
     mysatabase =\
-        connect_to_mysql(host=h, user=u, password=Upass, databases=dp)
+        connect_to_mysql(host=h, user=u, password=Upass,\
+                          databases=dp, port=3306)
 
     if mysatabase is None:
         exit(1)

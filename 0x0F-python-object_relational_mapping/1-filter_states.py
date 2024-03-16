@@ -33,7 +33,8 @@ if __name__ == "__main__":
     dp = argumant[3]
 
     mysatabase =\
-        connect_to_mysql(host=h, user=u, password=Upass, databases=dp)
+        connect_to_mysql(host=h, user=u, password=Upass,\
+                          databases=dp, port=3306)
 
     if mysatabase is None:
         exit(1)
