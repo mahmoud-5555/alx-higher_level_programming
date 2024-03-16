@@ -41,6 +41,9 @@ if __name__ == "__main__":
     dp_pointer = mysatabase.cursor()
     dp_pointer.execute("SELECT id,name FROM states\
                        WHERE name = '{}' ORDER BY id;".format(search))
-
-    for state in dp_pointer:
+    result = dp_pointer.fetchall()
+    for state in result:
         print(state)
+
+    dp_pointer.close()
+    mysatabase.close()

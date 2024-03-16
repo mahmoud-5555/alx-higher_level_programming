@@ -40,6 +40,9 @@ if __name__ == "__main__":
     dp_pointer = mysatabase.cursor()
     dp_pointer.execute("SELECT id,name FROM states\
                        WHERE name like 'N%' OR name = 'N' ORDER BY id;")
-
-    for state in dp_pointer:
+    result = dp_pointer.fetchall()
+    for state in result:
         print(state)
+
+    dp_pointer.close()
+    mysatabase.close()
