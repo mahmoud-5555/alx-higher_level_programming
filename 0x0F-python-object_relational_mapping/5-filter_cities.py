@@ -47,10 +47,9 @@ if __name__ == "__main__":
         if (state == 0):
             p_result += result[state][0]
         else:
-            p_result = p_result + ', ' +result[state][0]
-            
+            p_result = p_result + ', ' + result[state][0]
+
     print(p_result)
-    
 
     dp_pointer.close()
     mysatabase.close()
