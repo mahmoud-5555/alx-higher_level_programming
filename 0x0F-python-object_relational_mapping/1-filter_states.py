@@ -38,7 +38,8 @@ if __name__ == "__main__":
     if mysatabase is None:
         exit(1)
     dp_pointer = mysatabase.cursor()
-    dp_pointer.execute("SELECT id,name FROM states WHERE name like 'N%' ORDER BY id;")
+    dp_pointer.execute("SELECT id,name FROM states\
+                       WHERE name like 'N%' OR name = 'N' ORDER BY id;")
 
     for state in dp_pointer:
         print(state)
