@@ -31,10 +31,9 @@ if __name__ == "__main__":
     u = argumant[1]
     Upass = argumant[2]
     dp = argumant[3]
-    p = 3306
 
     mysatabase =\
-        connect_to_mysql(host=h, port=p, user=u, password=Upass, databases=dp)
+        connect_to_mysql(host=h, user=u, password=Upass, databases=dp)
 
     if mysatabase is None:
         exit(1)
