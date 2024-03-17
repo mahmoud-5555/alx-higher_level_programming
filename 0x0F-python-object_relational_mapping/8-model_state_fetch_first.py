@@ -21,4 +21,7 @@ if __name__ == "__main__":
     with engine.connect() as conn:
         result = conn.execute(sql.select(State).order_by(State.id))
         row = result.fetchone()
-        print("{}: {}".format(row[0], row[1]))
+        try:
+            print("{}: {}".format(row[0], row[1]))
+        except TypeError:
+            print("Nothing")
