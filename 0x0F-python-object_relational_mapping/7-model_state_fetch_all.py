@@ -10,8 +10,8 @@ from sqlalchemy.ext.declarative import declarative_base
 
 engine = create_engine('mysql://root:root@localhost:3306/hbtn_0e_4_usa')
 Base.metadata.create_all(engine)
-
-with engine.connect() as conn:
-    result = conn.execute(select(State))
-    for row in result:
-        print(row)
+if __name__ == "__main__":
+    with engine.connect() as conn:
+        result = conn.execute(select(State))
+        for row in result:
+            print(row)
