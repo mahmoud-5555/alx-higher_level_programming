@@ -21,4 +21,4 @@ if __name__ == "__main__":
     with engine.connect() as conn:
         result = conn.execute(sql.select(State).order_by(State.id))
         for row in result:
-            print(row)
+            print("{}: {}".format(row.id, row.name))
