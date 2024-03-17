@@ -25,4 +25,8 @@ if __name__ == "__main__":
         result = conn.execute(sql.select(State.id).
                               where(State.name == s))
     row = result.fetchone()
-    print("{}".format(row[0]))
+    try:
+        print("{}".format(row[0]))
+    except TypeError:
+        print("Not found")
+    
