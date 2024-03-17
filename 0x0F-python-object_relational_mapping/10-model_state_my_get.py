@@ -29,4 +29,3 @@ if __name__ == "__main__":
         print("{}".format(row[0]))
     except TypeError:
         print("Not found")
-    
