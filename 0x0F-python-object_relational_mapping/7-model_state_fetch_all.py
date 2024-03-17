@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""this module for printing all data in the databases from table state"""
 from model_state import Base, State
 from sqlalchemy import Column, Integer, String, create_engine, select
 from sqlalchemy.ext.declarative import declarative_base
