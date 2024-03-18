@@ -20,9 +20,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     with engine.connect() as conn:
-        query = sql.select
-        (State.name, City.id, City.name).join
-        (City, State.id == City.state_id).order_by(City.id)
+        query = sql.select(State.name, City.id, City.name).\
+            join(City, State.id == City.state_id).order_by(City.id)
         result = conn.execute(query)
         result = result.fetchall()
         for row in result:
