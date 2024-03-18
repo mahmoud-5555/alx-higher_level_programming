@@ -15,7 +15,7 @@ class City(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer,ForeignKey('State.id') ,nullable=False)
+    state_id = Column(Integer, ForeignKey('State.id'), nullable=False)
 
     def __init__(self, name, state_id):
         self.name = name
@@ -23,4 +23,3 @@ class City(Base):
 
 
 engine = create_engine('mysql://root:root@localhost:3306/hbtn_0e_4_usa')
-
