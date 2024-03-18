@@ -19,7 +19,7 @@ if __name__ == "__main__":
     engine = sql.create_engine('mysql://{}:{}@localhost:\
                                3306/{}'.format(u, p, d))
     with engine.connect() as conn:
-        updated_state = conn.execute(sql.update(State)
-                                     .where(State.id == 2)
-                                     .values(name= 'New Mexico'))
+        conn.execute(sql.update(State)
+                     .where(State.id == 2)
+                     .values(name='New Mexico'))
         conn.commit()
