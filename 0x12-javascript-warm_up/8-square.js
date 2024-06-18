@@ -11,12 +11,8 @@ if (args.length === 0) {
     console.log('Missing size');
   } else {
     // the logic of drowing
-    let line = '';
-    for (let i = 0; i < num; i++) {
-      line += 'X';
-    }
     for (let y = 0; y < num; y++) {
-      console.log(line);
+      console.log('X'.repeat(num));
     }
   }
 }
