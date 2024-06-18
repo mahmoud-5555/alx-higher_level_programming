@@ -1,5 +1,7 @@
 #!/usr/bin/node
 
+const { Console } = require("console");
+
 const args = process.argv.slice(2); // Slice to skip the first two elements
 
 if (args.length === 0) {
@@ -12,11 +14,14 @@ if (args.length === 0) {
     console.log('Missing size');
   } else {
     // the logic of drowing
+    let line = '';
     for (let i = 0; i < num; i++) {
-      for (let y = 0; y < num; y++) {
-        process.stdout.write('X');
-      }
-      process.stdout.write('\n');
+        line += 'X';
     }
+    for (let y = 0; y < num; y++) {
+      console.log(line)
+    }
+      
+    
   }
 }
