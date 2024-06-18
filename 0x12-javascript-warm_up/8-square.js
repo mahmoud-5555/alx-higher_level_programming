@@ -1,10 +1,10 @@
 #!/usr/bin/node
-const args = process.argv.slice(2); // Slice to skip the first two elements
+const { argv } = require('node:process');
 
-if (args.length === 0) {
+if (argv.length < 3) {
   console.log('Missing size');
 } else {
-  const input = args[0];
+  const input = argv[2];
   const num = +input; // Convert the argument to a number
 
   if (isNaN(num)) {
